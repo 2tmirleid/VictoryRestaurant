@@ -16,7 +16,14 @@ def index():
                            banner=dbase.get_banner(),
                            cook_delecious=dbase.get_cook_delecious(),
                            services=dbase.get_services(),
-                           book_table=dbase.get_book_table())
+                           book_table=dbase.get_book_table(),
+                           day_option=dbase.get_day_option(),
+                           hour_option=dbase.get_hour_option(),
+                           person_option=dbase.get_person_option(),
+                           form=dbase.get_form(),
+                           food_menu=dbase.get_foood_menu(),
+                           our_blog=dbase.get_our_blog(),
+                           icons=dbase.get_icons())
 
 
 if __name__ == '__main__':

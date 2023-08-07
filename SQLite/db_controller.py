@@ -55,3 +55,73 @@ class Db_Controller:
                 print('[SQLite] - - [Successful get book_table]')
         except sqlite3.Error as err:
             print(f'[ERROR] - - [{err}]')
+
+    def get_day_option(self):
+        try:
+            self.__cur.execute("""SELECT * FROM day_option""")
+            result = self.__cur.fetchall()
+            if result:
+                return result
+                print('[SQLite] - - [Successful get day_option]')
+        except sqlite3.Error as err:
+            print(f'[ERROR] - - [{err}]')
+
+    def get_hour_option(self):
+        try:
+            self.__cur.execute("""SELECT * FROM hour_option""")
+            result = self.__cur.fetchall()
+            if result:
+                return result
+                print('[SQLite] - - [Successful get hour_option]')
+        except sqlite3.Error as err:
+            print(f'[ERROR] - - [{err}]')
+
+    def get_person_option(self):
+        try:
+            self.__cur.execute("""SELECT * FROM person_option""")
+            result = self.__cur.fetchall()
+            if result:
+                return result
+                print('[SQLite] - - [Successful get person_option]')
+        except sqlite3.Error as err:
+            print(f'[ERROR] - - [{err}]')
+
+    def get_form(self):
+        try:
+            self.__cur.execute("""SELECT * FROM form""")
+            result = self.__cur.fetchall()
+            if result:
+                return result
+                print('[SQLite] - - [Successful get form]')
+        except sqlite3.Error as err:
+            print(f'[ERROR] - - [{err}]')
+
+    def get_foood_menu(self):
+        try:
+            self.__cur.execute("""SELECT * FROM food_menu""")
+            result = self.__cur.fetchall()
+            if result:
+                return result
+                print('[SQLite] - - [Successful get foood_menu]')
+        except sqlite3.Error as err:
+            print(f'[ERROR] - - [{err}]')
+
+    def get_our_blog(self):
+        try:
+            self.__cur.execute("""SELECT * FROM our_blog""")
+            result = self.__cur.fetchall()
+            if result:
+                return result
+                print('[SQLite] - - [Successful get our_blog]')
+        except sqlite3.Error as err:
+            print(f'[ERROR] - - [{err}]')
+
+    def get_icons(self):
+        try:
+            self.__cur.execute("""SELECT * FROM icons""")
+            result = self.__cur.fetchall()
+            if result:
+                return result
+                print('[SQLite] - - [Successful get icons]')
+        except sqlite3.Error as err:
+            print(f'[ERROR] - - [{err}]')

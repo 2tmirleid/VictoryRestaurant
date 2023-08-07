@@ -45,3 +45,57 @@ CREATE TABLE IF NOT EXISTS book_table
     input_data      text,
     btn_text        text
 );
+
+CREATE TABLE IF NOT EXISTS day_option
+(
+    id  integer PRIMARY KEY AUTOINCREMENT,
+    value text
+);
+
+CREATE TABLE IF NOT EXISTS hour_option
+(
+    id  integer PRIMARY KEY AUTOINCREMENT,
+    value text
+);
+
+CREATE TABLE IF NOT EXISTS person_option
+(
+    id  integer PRIMARY KEY AUTOINCREMENT,
+    value text
+);
+
+CREATE TABLE IF NOT EXISTS form
+(
+    id  integer PRIMARY KEY AUTOINCREMENT,
+    type text,
+    placeholder text
+);
+
+CREATE TABLE IF NOT EXISTS food_menu
+(
+    id  integer PRIMARY KEY AUTOINCREMENT,
+    title text,
+    img_url text,
+    price text,
+    name text,
+    description text
+);
+
+CREATE TABLE IF NOT EXISTS our_blog
+(
+    id  integer PRIMARY KEY AUTOINCREMENT,
+    img_url text,
+    date text,
+    title text,
+    span text,
+    description text,
+    btn_url text,
+    btn_text text
+);
+
+CREATE TABLE IF NOT EXISTS icons
+(
+    id  integer PRIMARY KEY AUTOINCREMENT,
+    url text,
+    class text
+);
