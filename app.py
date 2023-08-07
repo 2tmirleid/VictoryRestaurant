@@ -26,5 +26,18 @@ def index():
                            icons=dbase.get_icons())
 
 
+@app.route('/menu')
+def menu():
+    db = get_db()
+    dbase = Db_Controller(db)
+
+    return render_template('pages/menu.html',
+                           title='Our Menus',
+                           menu=dbase.get_menu(),
+                           icons=dbase.get_icons(),
+                           breakfast_menu=dbase.get_breakfast_menu(),
+                           lunch_menu=dbase.get_lunch_menu())
+
+
 if __name__ == '__main__':
     app.run(debug=True)

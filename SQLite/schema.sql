@@ -48,54 +48,72 @@ CREATE TABLE IF NOT EXISTS book_table
 
 CREATE TABLE IF NOT EXISTS day_option
 (
-    id  integer PRIMARY KEY AUTOINCREMENT,
+    id    integer PRIMARY KEY AUTOINCREMENT,
     value text
 );
 
 CREATE TABLE IF NOT EXISTS hour_option
 (
-    id  integer PRIMARY KEY AUTOINCREMENT,
+    id    integer PRIMARY KEY AUTOINCREMENT,
     value text
 );
 
 CREATE TABLE IF NOT EXISTS person_option
 (
-    id  integer PRIMARY KEY AUTOINCREMENT,
+    id    integer PRIMARY KEY AUTOINCREMENT,
     value text
 );
 
 CREATE TABLE IF NOT EXISTS form
 (
-    id  integer PRIMARY KEY AUTOINCREMENT,
-    type text,
+    id          integer PRIMARY KEY AUTOINCREMENT,
+    type        text,
     placeholder text
 );
 
 CREATE TABLE IF NOT EXISTS food_menu
 (
-    id  integer PRIMARY KEY AUTOINCREMENT,
-    title text,
-    img_url text,
-    price text,
-    name text,
+    id          integer PRIMARY KEY AUTOINCREMENT,
+    title       text,
+    img_url     text,
+    price       text,
+    name        text,
     description text
 );
 
 CREATE TABLE IF NOT EXISTS our_blog
 (
-    id  integer PRIMARY KEY AUTOINCREMENT,
-    img_url text,
-    date text,
-    title text,
-    span text,
+    id          integer PRIMARY KEY AUTOINCREMENT,
+    img_url     text,
+    date        text,
+    title       text,
+    span        text,
     description text,
-    btn_url text,
-    btn_text text
+    btn_url     text,
+    btn_text    text
 );
 
 CREATE TABLE IF NOT EXISTS icons
 (
-    id  integer PRIMARY KEY AUTOINCREMENT,
-    url text,
+    id    integer PRIMARY KEY AUTOINCREMENT,
+    url   text,
     class text
+);
+
+CREATE TABLE IF NOT EXISTS breakfast_menu
+(
+    id          integer PRIMARY KEY AUTOINCREMENT,
+    img_url     text,
+    price       text,
+    title       text,
+    description text
+);
+
+CREATE TABLE IF NOT EXISTS lunch_menu
+(
+    id          integer PRIMARY KEY AUTOINCREMENT,
+    img_url     text,
+    price       text,
+    title       text,
+    description text
 );

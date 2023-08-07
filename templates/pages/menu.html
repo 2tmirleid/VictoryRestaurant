@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {{ super() }}
+
+    {% block menu_heading %}
+        <section class="page-heading">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Our Menus</h1>
+                        <p>Curabitur at dolor sed felis lacinia ultricies sit amet vel sem. Vestibulum diam leo, sodales
+                            tempor lectus sed, varius gravida mi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}
+
+    {% block breakfast_menu %}
+        <section class="breakfast-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="breakfast-menu-content">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="left-image">
+                                        <img src="{{ url_for('static', filename="img/breakfast_menu.jpg") }}"
+                                             alt="Breakfast">
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <h2>Breakfast Menu</h2>
+                                    <div id="owl-breakfast" class="owl-carousel owl-theme">
+                                        {% for bm in breakfast_menu %}
+                                            <div class="item col-md-12">
+                                                <div class="food-item">
+                                                    <img src="{{ bm.img_url }}" alt="{{ bm.title }}">
+                                                    <div class="price">{{ bm.price }}</div>
+                                                    <div class="text-content">
+                                                        <h4>{{ bm.title }}</h4>
+                                                        <p>{{ bm.description }}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}
+
+    {% block lunch_menu %}
+        <section class="lunch-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="lunch-menu-content">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <h2>Lunch Menu</h2>
+                                    <div id="owl-lunch" class="owl-carousel owl-theme">
+                                        {% for lm in lunch_menu %}
+                                        <div class="item col-md-12">
+                                            <div class="food-item">
+                                                <img src="{{ lm.img_url }}" alt="{{ lm.title }}">
+                                                <div class="price">{{ lm.price }}</div>
+                                                <div class="text-content">
+                                                    <h4>{{ lm.title }}</h4>
+                                                    <p>{{ lm.description }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="left-image">
+                                            <img src="{{ url_for('static', filename="img/lunch_menu.jpg") }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}
+{% endblock %}
