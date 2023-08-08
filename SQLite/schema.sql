@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS menu
     url   text NOT NULL
 );
 
+--INDEX.HTML
 CREATE TABLE IF NOT EXISTS banner
 (
     id       integer PRIMARY KEY AUTOINCREMENT,
@@ -100,6 +101,7 @@ CREATE TABLE IF NOT EXISTS icons
     class text
 );
 
+--MENU.HTML
 CREATE TABLE IF NOT EXISTS breakfast_menu
 (
     id          integer PRIMARY KEY AUTOINCREMENT,
@@ -117,3 +119,63 @@ CREATE TABLE IF NOT EXISTS lunch_menu
     title       text,
     description text
 );
+
+CREATE TABLE IF NOT EXISTS dinner_menu
+(
+    id          integer PRIMARY KEY AUTOINCREMENT,
+    img_url     text,
+    price       text,
+    title       text,
+    description text
+);
+
+--BLOG.HTML
+CREATE TABLE IF NOT EXISTS blog_page
+(
+    id          integer PRIMARY KEY AUTOINCREMENT,
+    img_url     text,
+    date        text,
+    title       text,
+    span        text,
+    description text,
+    btn_text    text
+);
+
+--CONTACT.HTML
+CREATE TABLE IF NOT EXISTS contact_form
+(
+    id          integer PRIMARY KEY AUTOINCREMENT,
+    name        text,
+    placeholder text
+);
+
+--POST METHODS
+CREATE TABLE IF NOT EXISTS reservation
+(
+    id     integer PRIMARY KEY AUTOINCREMENT,
+    name   text    NOT NULL,
+    phone  text    NOT NULL,
+    person integer NOT NULL,
+    day    text    NOT NULL,
+    hour   text    NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS signup
+(
+    id    integer PRIMARY KEY AUTOINCREMENT,
+    email text NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS feedback
+(
+    id    integer PRIMARY KEY AUTOINCREMENT,
+    name  text NOT NULL,
+    email text NOT NULL,
+    phone text NOT NULL,
+    msg   text NOT NULL
+);
+
+
+
+
+
